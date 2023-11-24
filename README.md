@@ -1,6 +1,6 @@
 # Computing with Confidence
 
-The objective of the research work is to demonstrate the ability to propagate confidence structures, in the form of confidence-boxes (c-boxes), with the aim of geenrating generalised confidence bounds over the reliability estimates for engineering systems.
+The objective of the research work is to demonstrate the ability to propagate confidence structures, in the form of confidence-boxes (c-boxes), with the aim of generating generalised confidence bounds over the reliability estimates for engineering systems.
 In the work, the relationship between Boolean logic oeprations with system configurations (i.e., series or parallel) is established and the computations no longer just assumes independence, but also the uncertainties in the dependencies between components and path sets (i.e., dual-level dependencies).
 To perform the necessary computations, the Julia progamming is used with the following packages: `ProbabilityBoundsAnalysis.jl` and `UncLogic.jl`. The role of the repository is to provide a platform to present the codes which serve as a tutorial for those who are interested in learning and implementing the proposed methods presented in the literature.
 
