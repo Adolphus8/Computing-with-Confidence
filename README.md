@@ -5,10 +5,21 @@ Fault Tree Analysis with Imprecise Boolean Logic and Probability Bounds Analysis
 `ProbabilityBoundsAnalysis.jl` is a registered Julia package designed by [Dr Ander Gray](https://github.com/AnderGray/ProbabilityBoundsAnalysis.jl), and `UncLogic.jl` is a registered Julia package co-designed by [Enrique Miralles-Dolz and Dr. Ander Gray](https://github.com/Institute-for-Risk-and-Uncertainty/UncLogic.jl)
 The latest releases can be installed via the Julia package manager:
 
+For the `ProbabilityBoundsAnalysis.jl` package:
 ```julia
 julia> ]
 (v1.0) pkg> add ProbabilityBoundsAnalysis
 julia> using ProbabilityBoundsAnalysis
+```
+
+For the `UncLogic.jl` package:
+```
+> git clone https://github.com/AnderGray/UncLogic.jl.git
+> cd UncLogic
+> julia --project
+```
+```julia
+julia> using UncLogic
 ```
 
 ### Related packages:
