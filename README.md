@@ -4,7 +4,7 @@ The objective of the research work is to demonstrate and evaluate the feasibilit
 In the work, the relationship between Boolean logic oeprations with system configurations (i.e., series or parallel) is established and the computations no longer just assumes independence, but also the uncertainties in the dependencies between components.
 To perform the necessary computations, the R progamming code is used with the following packages: `pba BETTER.r` and `sra.r`. The role of the repository is to provide a platform to present the codes which serve as a tutorial for those who are interested in learning and implementing the proposed methods presented in the literature.
 
-`pba BETTER.r` is a R programming package designed by [Prof. Scott Ferson](https://github.com/ScottFerson/pba.r.git), and `sra.r` is an educational R programming package for risk assessment designed by Prof. Scott Ferson.
+`pba BETTER.r` is a R programming package to for probability bounds analysis while the `sra.r` is an educational R programming package for risk assessment, both designed by [Prof. Scott Ferson](https://github.com/ScottFerson/pba.r.git).
 
 ### Related packages:
 * [ProbabilityBoundsAnalysis.jl](https://github.com/AnderGray/ProbabilityBoundsAnalysis.jl): Julia version of this software.
