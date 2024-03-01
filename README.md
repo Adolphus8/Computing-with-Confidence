@@ -7,6 +7,6 @@ To perform the necessary computations, the R progamming code is used with the fo
 `pba BETTER.r` is a R programming package designed by [Prof. Scott Ferson](https://github.com/ScottFerson/pba.r.git), and `sra.r` is an educational R programming package for risk assessment designed by Prof. Scott Ferson.
 
 ### Related packages:
-* [ProbabilityBoundsAnalysis.jl]([https://github.com/AnderGray/ProbabilityBoundsAnalysis.jl): Julia version of this software.
+* [ProbabilityBoundsAnalysis.jl](https://github.com/AnderGray/ProbabilityBoundsAnalysis.jl): Julia version of this software.
 * [RAMAS® RiskCalc](https://www.ramas.com/riskcalc): a commerical software for distribution-free risk analysis.
 * [IntervalArithmetic.jl](https://github.com/JuliaIntervals/IntervalArithmetic.jl): the interval arithmetic package used in this software.
