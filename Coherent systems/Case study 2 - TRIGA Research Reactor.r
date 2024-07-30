@@ -14,6 +14,7 @@ sh = function(w, wi=NULL, m, pl=range(w)) {plot(w,xlim=pl); if (!missing(wi)) gr
 #######################################################################
 
 # Define the component C-boxes:
+samp = 200;
 p = KN(1,42);
 v3 = KN(8,42);
 ov3 = pbox(3.49e-5);
@@ -21,16 +22,16 @@ v4 = KN(8,42);
 ov4 = pbox(3.49e-5);
 
 # Define the Event C-boxes under uncertain dependencies:
-e3f = or(v3,ov3);
-e4f = or(v4,ov4);
-e2f = or(e3f,e4f);
-e1f = and(p, e2f);
+e4f = or(v4,ov4);  cbox_vec = array(c(e4f@d, e4f@u),dim = c(samp,2)); write.csv(cbox_vec, "E4_cbox_frechet_TRIGA.csv")  
+e3f = or(v3,ov3);  cbox_vec = array(c(e3f@d, e3f@u),dim = c(samp,2)); write.csv(cbox_vec, "E3_cbox_frechet_TRIGA.csv")  
+e2f = or(e3f,e4f); cbox_vec = array(c(e2f@d, e2f@u),dim = c(samp,2)); write.csv(cbox_vec, "E2_cbox_frechet_TRIGA.csv")  
+e1f = and(p, e2f); cbox_vec = array(c(e1f@d, e1f@u),dim = c(samp,2)); write.csv(cbox_vec, "E1_cbox_frechet_TRIGA.csv")  
 
 # Define the Event C-boxes under independence:
-e3i = orI(v3,ov3);
-e4i = orI(v4,ov4);
-e2i = orI(e3i,e4i);
-e1i = andI(p, e2i);
+e4i = orI(v4,ov4);  cbox_vec = array(c(e4i@d, e4i@u),dim = c(samp,2)); write.csv(cbox_vec, "E4_cbox_indep_TRIGA.csv") 
+e3i = orI(v3,ov3);  cbox_vec = array(c(e3i@d, e3i@u),dim = c(samp,2)); write.csv(cbox_vec, "E3_cbox_indep_TRIGA.csv") 
+e2i = orI(e3i,e4i); cbox_vec = array(c(e2i@d, e2i@u),dim = c(samp,2)); write.csv(cbox_vec, "E2_cbox_indep_TRIGA.csv") 
+e1i = andI(p, e2i); cbox_vec = array(c(e1i@d, e1i@u),dim = c(samp,2)); write.csv(cbox_vec, "E1_cbox_indep_TRIGA.csv") 
 
 # Plot the C-boxes of the components:
 rbyc(2,3)

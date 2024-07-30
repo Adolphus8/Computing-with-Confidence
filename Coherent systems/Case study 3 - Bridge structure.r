@@ -15,8 +15,10 @@ sh = function(w, wi=NULL, m, pl=range(w)) {plot(w,xlim=pl); if (!missing(wi)) gr
 samp = 200;
 
 # Define the component C-boxes:
-C1 = C2 = KN(23,24);
-C3 = C4 = KN(14,17);
+C1 = KN(23,24);
+C2 = KN(23,24);
+C3 = KN(14,17);
+C4 = KN(14,17);
 C5 = KN(12,12);
 
 # Plot the C-boxes of the components:
@@ -48,10 +50,20 @@ beta <- function(v,w) if ((v==0) && (w==0)) env(rep(0,many),rep(1,many)) else if
 pairsides <- function(b) {i = sampleindices(); return(env(leftside(b)[i],rightside(b)[i]))}
 
 kn <- function(k,n) return(pairsides(env(beta(k, n-k+1), beta(k+1, n-k)))) 
+orI <- function(x,y) return(1-(1-x)*(1-y))
+andI <- function(x,y) return(x*y)
 #######################################################################
 
 # Define the State function of the Bridge structure:
 bb = function(a,b,c,d,e) a*c+b*d+a*d*e+b*c*e-a*b*c*e-a*c*d*e-a*b*d*e-b*c*d*e-a*b*c*d+2*a*b*c*d*e
+
+bb_boolean = function(a,b,c,d,e) {
+phi1 = andI(a,c);
+phi2 = andI(b,d);
+phi3 = andI(a,andI(d,e));
+phi4 = andI(b,andI(c,e));
+return(orI(orI(phi1,phi2),orI(phi3,phi4)));
+}
 
 bridgeI = function(a,b,c,d,e,bb) {
   L = leftside
@@ -78,13 +90,16 @@ plotbox <- function(b,new=TRUE,col='blue',lwd=2,xlim=range(b[is.finite(b)]),ylim
   if (many < length(b)) edf(c(min(b),max(b),b[(many+1):length(b)]),col,lwd)
   }
 
-C1 = C2 = kn(23,24)
-C3 = C4 = kn(14,17)
-C5 = kn(12,12)
+C1 = kn(23,24);
+C2 = kn(23,24);
+C3 = kn(14,17);
+C4 = kn(14,17);
+C5 = kn(12,12);
 
-R_S1_ps_State = bridgeI(C1,C2,C3,C4,C5,bb)
+R_S1_ps_State = bridgeI(C1,C2,C3,C4,C5,bb);
+R_S1_ps_Boolean = bridgeI(C1,C2,C3,C4,C5,bb_boolean);
 
 
 # Plot the C-boxes of the system reliability for S1:
-sh(R_S1_ps_Boolean,,'S1 Reliability - Boolean',c(0,1))
-plotbox(R_S1_ps_State); title('S1 Reliability - State Function')
+plotbox(R_S1_ps_Boolean); title('S1 Reliability - Boolean Function')
+plotbox(R_S1_ps_State,FALSE,col='green'); title('S1 Reliability - State Function')
