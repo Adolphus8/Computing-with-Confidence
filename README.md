@@ -14,6 +14,7 @@ The repository consists of the codes to the Illustrative example as well as the 
 3) Case study 2 - TRIGA Research Reactor.r
 4) Case study 3 - Bridge structure.r
 5) Images.m (Run this MATLAB code last as it is a file to generate the images presented in the manuscript)
+6) Supplementary folder - Containing MATLAB codes to the three case studies which seeks to compare the Structure function solution to that of the Boolean expression using Monte Carlo (under independence assumption only)
 
 ### Related packages:
 * [ProbabilityBoundsAnalysis.jl](https://github.com/AnderGray/ProbabilityBoundsAnalysis.jl): Julia version of this software.
