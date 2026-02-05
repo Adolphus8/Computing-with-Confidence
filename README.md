@@ -13,7 +13,7 @@ The repository consists of the codes to the Illustrative example as well as the 
 2) Case study 1 - Pressure tank system.r
 3) Case study 2 - TRIGA Research Reactor.r
 4) Case study 3 - Bridge structure.r
-5) Images.m (Run this MATLAB code last as it is a file to generate the images presented in the manuscript)
+5) Case study 4 - Radiation Release Nuclear Reactor.r
 6) Supplementary folder - Containing MATLAB codes to the three case studies which seeks to compare the Structure function solution to that of the Boolean expression using Monte Carlo (under independence assumption only)
 
 ### Related packages:
@@ -22,4 +22,5 @@ The repository consists of the codes to the Illustrative example as well as the 
 * [IntervalArithmetic.jl](https://github.com/JuliaIntervals/IntervalArithmetic.jl): the interval arithmetic package used in this software.
 
 ## Reference:
-* A. Lye, W. Vechgama, M. Sallak, S. Destercke, S. Ferson, and S. Xiao (2024). Advances in the reliability analysis of coherent systems under limited data with Confidence boxes. *ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems Part A: Civil Engineering* (Accepted). doi: TBC
+* A. Lye, S. Ferson, and S. Xiao (2025). Distribution-Free Level 2 Probabilistic Risk Analysis with Confidence under Limited Data. *In Proceedings of the 16th Vietnam Conference on Nuclear Science and Technology*, Danang City. Link to paper: [Click here](https://www.researchgate.net/publication/396375337_Distribution-Free_Level_2_Probabilistic_Risk_Analysis_with_Confidence_under_Limited_Data)
+* A. Lye, W. Vechgama, M. Sallak, S. Destercke, S. Ferson, and S. Xiao (2024). Advances in the reliability analysis of coherent systems under limited data with Confidence boxes. *ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems Part A: Civil Engineering, 11*, 04024074. doi: [10.1061/AJRUA6/RUENG-1380](https://ascelibrary.org/doi/10.1061/AJRUA6.RUENG-1380)
