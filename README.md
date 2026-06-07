@@ -19,6 +19,7 @@ The repository consists of the codes to the Illustrative example as well as the 
 ### Related packages:
 * [ProbabilityBoundsAnalysis.jl](https://github.com/AnderGray/ProbabilityBoundsAnalysis.jl): Julia version of this software.
 * [RAMAS® RiskCalc](https://www.ramas.com/riskcalc): a commerical software for distribution-free risk analysis.
+* [PyUncertainNumber](https://github.com/leslieDLcy/PyUncertainNumber): a Python package for generic computational tasks focussing on rigorous uncertainty analysis.
 * [IntervalArithmetic.jl](https://github.com/JuliaIntervals/IntervalArithmetic.jl): the interval arithmetic package used in this software.
 
 ## Reference:
